@@ -1,7 +1,9 @@
 package com.example.dm12020hello
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -9,7 +11,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // MEU CÓDIGO
+        btnOk.setOnClickListener {
+
+            val nome = edtNome.text.toString()
+
+            val i = Intent(this, Tela2::class.java)
+
+            i.putExtra("nome_digitado", nome)
+
+            startActivity(i)
+
+        }
 
     }
 }
