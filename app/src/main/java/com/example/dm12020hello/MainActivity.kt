@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
 
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        edtNome.text.clear()
 
     }
 }
