@@ -15,6 +15,9 @@ class Tela2 : AppCompatActivity() {
 
         txtBoasVindas.text = "Olá "+ nome + ", seja bem vindo!"
 
+        val curso = intent.getStringExtra("curso_escolhido")
+
+        txtCurso.text = curso
 
         btnVoltar.setOnClickListener {
             finish()
