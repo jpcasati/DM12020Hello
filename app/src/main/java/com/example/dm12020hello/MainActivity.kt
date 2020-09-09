@@ -35,8 +35,9 @@ class MainActivity : AppCompatActivity() {
             } else {
                 val i = Intent(this, Tela2::class.java)
 
-                i.putExtra("nome_digitado", nome)
-                i.putExtra("curso_escolhido", curso)
+                val p = Pessoa(nome, curso)
+
+                i.putExtra("pessoa", p)
 
                 startActivity(i)
             }
